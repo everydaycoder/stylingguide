@@ -7,15 +7,11 @@ h1 {
   text-align: center;
 }
 
-a:link {
-  color: #0f3fff;
-  text-decoration: underline;
-}
-
-a:visited {
+a {
   text-decoration: none;
+  color: #0f3fff;
 }
 
 a:hover {
-  color: #44ef54;
+  color: #0b0bbb;
 }
