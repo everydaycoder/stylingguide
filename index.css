@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #00ac10;
+}
+
+a {
+  color: #0f3fff;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #0f3fff;
+  text-decoration: none;
+}
