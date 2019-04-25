@@ -7,11 +7,11 @@ h1 {
   text-align: center;
 }
 
-a {
+a:not(.header) {
   text-decoration: none;
   color: #0f3fff;
 }
 
-a:hover {
+a:hover:not(.header) {
   color: #0b0bbb;
 }
