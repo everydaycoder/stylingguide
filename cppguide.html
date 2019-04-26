@@ -14,16 +14,19 @@
     <h1 id="headers_include-guard"><a href="#headers_include-guard" class="header"><i class="fas fa-link fa-xs"></i>Include Guard</a></h1>
     <p>In a program with multiple files, which, assuming you do, since this is a header file we're talking about, you may include the same header file more than once. This can lead to absolutely catastrophic errors, and ones that absolutely cannot be recovered from. To fix this, we need a way of making sure that only one instance of a header ever exists during runtime.</p>
     <p>Since this is a compiler error, we need to use preprocessing code. Look at the code below to see what this implementation may look like.</p>
-    <code>
-      <span style="color: purple">#ifndef __FOO_BAR_BAZ_H__<br/>
-      #define __FOO_BAR_BAZ_H__</span><br/>
-      <br/>
-      <span style="color: green">namespace</span> <span style="color: white">foo {</span><br/>
-      <span style="color: green">constexpr</span> <span style="color: white">kBaz =</span> <span style="color: red">3.14</span><span style="color: white">;<br/>
-      }</span> <span style="color: blue">// namespace foo (See link one in caption)</span><br/>
-      <br/>
-      <span style="color: purple">#endif</span> <span style="color: blue">// __FOO_BAR_BAZ_H__ (See link one in caption)</span><br/>
-    </code>
+    <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3
+4
+5
+6</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">#ifndef __FOO_BAR_BAZ_H__</span>
+<span style="color: #75715e">#define __FOO_BAR_BAZ_H__</span>
+
+<span style="color: #75715e">// ... declare things here</span>
+
+<span style="color: #75715e">#endif // __FOO_BAR_BAZ_H__ (See Closing Links)</span>
+</pre></td></tr></table></div>
+
     <div class="codecapt">An example of an apparently very bad naming system. Links: <a href="#comments_closing-comments">Closing Comments</a></div>
     <hr/>
     <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License BY-SA" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The Everyday Coder Style Guides</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://everydaycoder.github.io/" property="cc:attributionName" rel="cc:attributionURL">The Everyday Coder</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://everydaycoder.github.io/stylingguide/" rel="dct:source">https://everydaycoder.github.io/stylingguide/</a>.
