@@ -18,6 +18,6 @@ a:hover:not(.header) {
 }
 
 .codecapt {
-  text-style: italics;
+  text-style: italic;
   background: solid lightgray;
 }
