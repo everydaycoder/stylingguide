@@ -19,5 +19,6 @@ a:hover:not(.header) {
 
 .codecapt {
   text-style: italic;
-  background: solid lightgray;
+  background: lightgray;
+  padding: 8px;
 }
