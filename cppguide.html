@@ -15,14 +15,14 @@
     <p>In a program with multiple files, which, assuming you do, since this is a header file we're talking about, you may include the same header file more than once. This can lead to absolutely catastrophic errors, and ones that absolutely cannot be recovered from. To fix this, we need a way of making sure that only one instance of a header ever exists during runtime.</p>
     <p>Since this is a compiler error, we need to use preprocessing code. Look at the code below to see what this implementation may look like.</p>
     <code>
-      <span style="color: purple">#ifndef __FOO_BAR_BAZ_H__
-      #define __FOO_BAR_BAZ_H__</span>
-      
-      <span style="color: green">namespace</span> <span style="color: white">foo {</span>
-      <span style="color: green">constexpr</span> <span style="color: white">kBaz =</span> <span style="color: red">3.14</span><span style="color: white">;
-      }</span> <span style="color: blue">// namespace foo (See link one in caption)</span>
-      
-      <span style="color: purple">#endif</span> <span style="color: blue">// __FOO_BAR_BAZ_H__ (See link one in caption)</span>
+      <span style="color: purple">#ifndef __FOO_BAR_BAZ_H__<br/>
+      #define __FOO_BAR_BAZ_H__</span><br/>
+      <br/>
+      <span style="color: green">namespace</span> <span style="color: white">foo {</span><br/>
+      <span style="color: green">constexpr</span> <span style="color: white">kBaz =</span> <span style="color: red">3.14</span><span style="color: white">;<br/>
+      }</span> <span style="color: blue">// namespace foo (See link one in caption)</span><br/>
+      <br/>
+      <span style="color: purple">#endif</span> <span style="color: blue">// __FOO_BAR_BAZ_H__ (See link one in caption)</span><br/>
     </code>
     <div class="codecapt">An example of an apparently very bad naming system. Links: <a href="#comments_closing-comments">Closing Comments</a></div>
     <hr/>
