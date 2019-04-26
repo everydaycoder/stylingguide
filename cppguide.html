@@ -26,8 +26,14 @@
 
 <span style="color: #75715e">#endif // __FOO_BAR_BAZ_H__ (See Closing Comments)</span>
 </pre></td></tr></table></div>
-
     <div class="codecapt">An example of an apparently very bad naming system. Links: <a href="#comments_closing-comments">Closing Comments</a></div>
+    <p>As you can see, we check if a macro that was specifically tailored as an id for the header file exists, and if it doesn't, we define it. Note the fact that we don't have to give it a value. In fact, at a large scale, you REALLY don't want to define a value, because it saves space. Don't forget to end the if statement at the end of the file, or else it will be an error in and of itself.</p>
+    <p>The naming convention is nice and simple. All that this convention assumes is that you have your header file in a directory that isn't named exactly after the project name, disregarding case.</p>
+    <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">#ifndef __PROJECT_PATH_NAME_H__</span>
+<span style="color: #75715e">// ... Other parts of the file</span>
+</pre></td></tr></table></div>
+    <div class="codecapt">Shows the naming convention of the Include Guard, where <code style="font-style: none;">PROJECT</code> is the project name, <code style="font-style: none;">PATH</code> is the path to the file*, and <code style="font-style: none;">NAME</code> is the name of your header file, obviously without the `.h' part.<br/><br/>* The path should really only be the file's parent directory, but in the case you need a full path, slashes are replaced with underscores.</div>
     <hr/>
     <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License BY-SA" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The Everyday Coder Style Guides</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://everydaycoder.github.io/" property="cc:attributionName" rel="cc:attributionURL">The Everyday Coder</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://everydaycoder.github.io/stylingguide/" rel="dct:source">https://everydaycoder.github.io/stylingguide/</a>.
   </body>
