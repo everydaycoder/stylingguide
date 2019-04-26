@@ -11,6 +11,20 @@
     <p>Code that involves these kinds of things becomes hard to manage and maintain, and so nobody can get any work done at the end of the day. Since all of the documentation and code our developers write get shared with others, this is a big problem. So what we did is come up with a set of guidelines you should follow in order to make your code as readable as possible.</p>
     <p>This document also is meant to be something you have to study for days on end in order to perfect. We've compacted it into such a small size, that you could learn almost everything there is to know here in a few hours, if not less than an hour. This is a result of the strive to make the <a href="https://google.github.io/styleguide/">Google Style Guides</a> easier to abide by, since these documents sometimes take even a few weeks to perfect.</p>
     <h1 id="headers"><a href="#headers" class="header"><i class="fas fa-link fa-xs"></i>Headers</a></h1>
+    <h1 id="headers_include-guard"><a href="#headers_include-guard" class="header"><i class="fas fa-link fa-xs"></i>Include Guard</a></h1>
+    <p>In a program with multiple files, which, assuming you do, since this is a header file we're talking about, you may include the same header file more than once. This can lead to absolutely catastrophic errors, and ones that absolutely cannot be recovered from. To fix this, we need a way of making sure that only one instance of a header ever exists during runtime.</p>
+    <p>Since this is a compiler error, we need to use preprocessing code. Look at the code below to see what this implementation may look like.</p>
+    <pre>
+      #ifndef __FOO_BAR_BAZ_H__<br/>
+      #define __FOO_BAR_BAZ_H__<br/>
+      <br/>
+      namespace foo {<br/>
+      constexpr kBaz = 3.14;<br/>
+      } // namespace foo (See link one in caption)<br/>
+      <br/>
+      #endif // __FOO_BAR_BAZ_H__ (See link one in caption)
+    </pre>
+    <div class="codecapt">An example of an apparently very bad naming system. Links: <a href="#comments_closing-comments">Closing Comments</a></div>
     <hr/>
     <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License BY-SA" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The Everyday Coder Style Guides</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://everydaycoder.github.io/" property="cc:attributionName" rel="cc:attributionURL">The Everyday Coder</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://everydaycoder.github.io/stylingguide/" rel="dct:source">https://everydaycoder.github.io/stylingguide/</a>.
   </body>
