@@ -16,3 +16,8 @@ a:not(.header) {
 a:hover:not(.header) {
   color: #0b0bbb;
 }
+
+.codecapt {
+  text-style: italics;
+  background: solid lightgray;
+}
